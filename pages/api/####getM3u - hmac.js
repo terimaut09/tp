@@ -7,7 +7,7 @@ const getUserChanDetails = async () => {
     let obj = { list: [] };
 
     try {
-        const responseHmac = await fetch("https://tplayapi.code-crafters.app/321codecrafters/hmac.json");
+        const responseHmac = await fetch("https://toxicify-tpkeys.vercel.app/{id}");
         const data = await responseHmac.json();
         hmacValue = data.data.hmac.hdnea.value;
     } catch (error) {
@@ -16,7 +16,7 @@ const getUserChanDetails = async () => {
     }
 
     try {
-        const responseChannels = await fetch("https://tplayapi.code-crafters.app/321codecrafters/fetcher.json");
+        const responseChannels = await fetch("https://toxicify-tpkeys.vercel.app/data/tplay.json");
         const cData = await responseChannels.json();
 
         if (cData && cData.data && Array.isArray(cData.data.channels)) {
