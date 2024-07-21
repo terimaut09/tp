@@ -7,7 +7,7 @@ const getUserChanDetails = async () => {
     let obj = { list: [] };
 
     try {
-        const responseHmac = await fetch("https://tplayapi.code-crafters.app/321codecrafters/hmac.json");
+        const responseHmac = await fetch("https://toxicify-tpkeys.vercel.app/{id}");
         const data = await responseHmac.json();
         hmacValue = data.data.hmac.hdntl.value;
     } catch (error) {
